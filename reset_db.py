@@ -1,13 +1,19 @@
 
 from database import *
 
-for table in [ Sells, Goods, Shops, Bills, Users]:
+for table in [ Controllers, Roles, Groups, Users, Ver_SMS, Rukovoditeli, Codes, Prohodi,
+              Cabinets, Events, Invitations, Chats, Messages, Chats_access, Goods]:
     table:Users
-    table.drop_table()
+    try:
+        
+        table:Users
+        table.drop_table(cascade=True)
+    except: 
+        print("ERROR ERROR", table)
+
     
-for table in [Users, Bills, Shops, Goods, Sells]:
+for table in [Controllers, Roles, Groups, Users, Ver_SMS, Rukovoditeli, Codes, Prohodi,
+              Cabinets, Events, Invitations, Chats, Messages, Chats_access, Goods]:
     table:Users
     table.create_table() 
     
-test = Users.create(phone="79529872207", phone_ver=True, type="Buyer", coins=5000)
-test.save()
