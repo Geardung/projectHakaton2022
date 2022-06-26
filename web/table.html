@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackaton 2022</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="table">
+        <div class="table_head">
+            <img class="childe_menu" src="images/arrow.png" alt="image" width="10%" onclick="window.location = './authoriz.html';">
+            <p class="table_title">Панель администратора > События > Посещения</p>
+        </div>
+        <table class="table_table">
+            <tr>
+                <th>ID</th>
+                <th>Время события</th>
+                <th>Событие</th>
+                <th>ФИО</th>
+                <th>Роль</th>
+                <th>Класс</th>
+            </tr>
+            <tr>
+                <td>112345</td>
+                <td>01.09.2022 09:51:28</td>
+                <td>Вход в школу</td>
+                <td>Иванов Иван Иванович</td>
+                <td>Ученик</td>
+                <td>8 “Б”</td>
+            </tr>
+            <tr>
+                <td>112345</td>
+                <td>01.09.2022 09:51:28</td>
+                <td>Вход в школу</td>
+                <td>Иванов Иван Иванович</td>
+                <td>Ученик</td>
+                <td>8 “Б”</td>
+            </tr>
+            <tr>
+                <td>112345</td>
+                <td>01.09.2022 09:51:28</td>
+                <td>Вход в школу</td>
+                <td>Иванов Иван Иванович</td>
+                <td>Ученик</td>
+                <td>8 “Б”</td>
+            </tr>
+            <tr>
+                <td>112345</td>
+                <td>01.09.2022 09:51:28</td>
+                <td>Вход в школу</td>
+                <td>Иванов Иван Иванович</td>
+                <td>Ученик</td>
+                <td>8 “Б”</td>
+            </tr>
+            <tr>
+                <td>112345</td>
+                <td>01.09.2022 09:51:28</td>
+                <td>Вход в школу</td>
+                <td>Иванов Иван Иванович</td>
+                <td>Ученик</td>
+                <td>8 “Б”</td>
+            </tr>
+            <tr>
+                <td>112345</td>
+                <td>01.09.2022 09:51:28</td>
+                <td>Вход в школу</td>
+                <td>Иванов Иван Иванович</td>
+                <td>Ученик</td>
+                <td>8 “Б”</td>
+            </tr>
+            <tr>
+                <td>112345</td>
+                <td>01.09.2022 09:51:28</td>
+                <td>Вход в школу</td>
+                <td>Иванов Иван Иванович</td>
+                <td>Ученик</td>
+                <td>8 “Б”</td>
+            </tr>
+            <tr>
+                <td>112345</td>
+                <td>01.09.2022 09:51:28</td>
+                <td>Вход в школу</td>
+                <td>Иванов Иван Иванович</td>
+                <td>Ученик</td>
+                <td>8 “Б”</td>
+            </tr>
+            <tr>
+                <td>112345</td>
+                <td>01.09.2022 09:51:28</td>
+                <td>Вход в школу</td>
+                <td>Иванов Иван Иванович</td>
+                <td>Ученик</td>
+                <td>8 “Б”</td>
+            </tr>
+            <tr>
+                <td>112345</td>
+                <td>01.09.2022 09:51:28</td>
+                <td>Вход в школу</td>
+                <td>Иванов Иван Иванович</td>
+                <td>Ученик</td>
+                <td>8 “Б”</td>
+            </tr>
+            <tr>
+                <td>112345</td>
+                <td>01.09.2022 09:51:28</td>
+                <td>Вход в школу</td>
+                <td>Иванов Иван Иванович</td>
+                <td>Ученик</td>
+                <td>8 “Б”</td>
+            </tr>
+            <tr>
+                <td>112345</td>
+                <td>01.09.2022 09:51:28</td>
+                <td>Вход в школу</td>
+                <td>Иванов Иван Иванович</td>
+                <td>Ученик</td>
+                <td>8 “Б”</td>
+            </tr>
+            <tr>
+                <td>112345</td>
+                <td>01.09.2022 09:51:28</td>
+                <td>Вход в школу</td>
+                <td>Иванов Иван Иванович</td>
+                <td>Ученик</td>
+                <td>8 “Б”</td>
+            </tr>
+        </table>
+    </header>
+
+    <script src="js/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
+    <script src="js/maska-nomera.js" type="text/javascript" ></script>
+
+<script>
+$('.mask-phone').mask('+7 (999) 999-99-99');
+
+$.fn.setCursorPosition = function(pos) {
+if ($(this).get(0).setSelectionRange) {
+$(this).get(0).setSelectionRange(pos, pos);
+} else if ($(this).get(0).createTextRange) {
+var range = $(this).get(0).createTextRange();
+range.collapse(true);
+range.moveEnd('character', pos);
+range.moveStart('character', pos);
+range.select();
+}
+};
+
+
+$('input[type="tel"]').click(function(){
+$(this).setCursorPosition(4);  // set position number
+});
+</script>
+</body>
+</html>

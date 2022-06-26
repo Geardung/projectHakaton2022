@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackaton 2022</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="account">
+        <div class="account_wrapper">
+            <div class="account_head">
+                <div class="account_wrapper">
+                    <div class="account_head childe_head">
+                        <img class="childe_menu" src="images/arrow.png" alt="image" width="10%" onclick="window.location = './authoriz.html';">
+                        <h2 class="account_title">Личный кабинет</h2>                
+                    </div>        
+                </div> 
+
+            </div> 
+            <div class="account_about">
+                <img class="account_photo" src="images/account_photo.png" alt="image">
+                <div class="account_status">
+                    <span class="account_subtitle__bold">Иванова Марина Ивановна</span>
+                    <span class="account_subtitle">08.09.1989 г.р.</span>
+                    <span class="account_subtitle__bold">Статус:</span>
+                    <span class="account_subtitle">Родитель</span>
+                    <div class="account_item"><img class="account_pencil" src="images/account_pencil.svg" alt="image"></div>
+                </div> 
+            </div> 
+            <div class="account_children"> 
+                <button class="account_button">
+                    <p class="account_p">Дети</p>
+                    <img class="account_plus" src="images/account_plus.svg" alt="image">
+                </button> 
+                <div class="account_case">
+                    <div class="account_vector">
+                        <span class="account_subtitle__bold">Иванов Сергей Иванович</span>
+                        <img class="account_vect" src="images/account_vector.svg" alt="image">
+                    </div>
+                    <span class="account_subtitle account_span">08.09.2010 г.р.</span>
+                    <span class="account_subtitle__bold account_span">Статус: Ученик</span>
+                    <span class="account_subtitle account_span">8 Б класс</span>
+                </div>                
+            </div> 
+            <div class="account_children"> 
+                <button class="account_button">
+                    <p class="account_p">Гость системы</p>
+                    <img class="account_plus" src="images/account_plus.svg" alt="image">
+                </button> 
+                <div class="account_case">
+                    <div class="account_vector">
+                        <span class="account_subtitle__bold">Антипов Михаил Иванович</span>
+                        <img class="account_vect" src="images/account_vector.svg" alt="image">
+                    </div>
+                    <span class="account_subtitle account_span">08.09.1995 г.р.</span>
+                    <span class="account_subtitle__bold account_span">Статус: Дядя</span>
+                    <span class="account_subtitle account_span">+7900-000-00-00</span>
+                </div>                
+            </div> 
+            <button class="account_buttons">
+                <p class="account_subtitle__bold">Получить единоразовый код входа</p>
+                <p class="account_subtitle">Действует 1 час</p>
+            </button>
+        </div> 
+    </header> 
+
+    <script src="js/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
+    <script src="js/maska-nomera.js" type="text/javascript" ></script>
+
+<script>
+$('.mask-phone').mask('+7 (999) 999-99-99');
+
+$.fn.setCursorPosition = function(pos) {
+if ($(this).get(0).setSelectionRange) {
+$(this).get(0).setSelectionRange(pos, pos);
+} else if ($(this).get(0).createTextRange) {
+var range = $(this).get(0).createTextRange();
+range.collapse(true);
+range.moveEnd('character', pos);
+range.moveStart('character', pos);
+range.select();
+}
+};
+
+
+$('input[type="tel"]').click(function(){
+$(this).setCursorPosition(4);  // set position number
+});
+
+$(document).ready(function(){
+    //Скрыть PopUp при загрузке страницы    
+    PopUpHide();
+});
+//Функция отображения PopUp
+function PopUpShow(){
+    $("#popup1").show();
+}
+//Функция скрытия PopUp
+function PopUpHide(){
+    $("#popup1").hide();
+}
+
+</script>
+</body>
+</html>

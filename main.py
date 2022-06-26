@@ -24,23 +24,17 @@ async def start_verification_phone(phone):
         new_sms_code = database.Ver_SMS.create(id = a, code = randint(100000, 999999), for_phone=phone[1:])
         new_sms_code.save()
         
-        get("https://new.smsgorod.ru/apiSms/create", params={
-            "apiKey": "Cs3ht8aY8twG1Pb39qlHyr5JfYc6wRvXOY4HpUluMmxoZaJfsCdeAJG12Y6v",
-            "sms": [
-              {
-                "channel": "char",
-                "phone": new_sms_code.for_phone,
-                "text": "Ваш код: " + str(new_sms_code.code)
-              }
-            ]
-            }
-        )
         
         return {"success": True, "code": new_sms_code.code}
     
     else:
         return {"success": False, "message": "User not registered"}
     
+
+@app.get("/api/v1/get_info")
+async def Get_User_Info():
+    return {"info": "Okey"}
+
 
 
 if __name__ == '__main__':
